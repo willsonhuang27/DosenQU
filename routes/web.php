@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', 'PageController@showLogin');
+Route::get('/dashboard', 'PageController@showDashboard');
+Route::post('/doLogin', 'UserController@login');
+
+//grouping
+//Route::group(['middleware'=>['checkAuth']],function(){
+//    Route::get('/login', 'PageController@showLogin');
+//    Route::post('/doLogin', 'UserController@login');
+//});
