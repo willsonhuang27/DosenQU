@@ -78,17 +78,43 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Hello !{{--Laravel--}}
-                </div>
+                    <a href="/login">login
+                {{--<div class="title m-b-md">--}}
+                    {{--Hello World!--}}
+                {{--</div>--}}
+                {{--<div class="">--}}
+                    {{--<table>--}}
+                        {{--<tr>--}}
+                            {{--<td>Statement</td>--}}
+                        {{--</tr>--}}
+                        {{--<tr>--}}
+                            {{--<td>Apakah kode dosen D9999 memiliki penilaian objektif?</td>--}}
+                        {{--</tr>--}}
+                    {{--</table>--}}
+                {{--</div>--}}
+                {{--<div class="">--}}
+                    {{--<table>--}}
+                        {{--<tr>--}}
+                            {{--<td>Moment of Truth</td>--}}
+                        {{--</tr>--}}
+                        {{--<tr>--}}
+                            {{--<td>Iya, karena saya telah diajarkan oleh beliau 3x</td>--}}
+                        {{--</tr>--}}
+                        {{--<tr>--}}
+                            {{--<td>Menurut saya sih tidak!</td>--}}
+                        {{--</tr>--}}
+                    {{--</table>--}}
+                {{--</div>--}}
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                {{--<div class="links">--}}
+                    {{--<a href="https://laravel.com/docs">Documentation</a>--}}
+                    {{--<a href="https://laracasts.com">Laracasts</a>--}}
+                    {{--<a href="https://laravel-news.com">News</a>--}}
+                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
+                    {{--<a href="https://github.com/laravel/laravel">GitHub</a>--}}
+                {{--</div>--}}
+
+
             </div>
         </div>
     </body>
