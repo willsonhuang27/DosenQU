@@ -17,7 +17,7 @@ class CreateThreadsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('stsrc');
-            $table->increments('thread_id');
+//            $table->increments('thread_id');
             $table->string('forum_id');
             $table->string('content');
             $table->integer('user_id');

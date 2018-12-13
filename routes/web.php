@@ -16,11 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'PageController@showLogin');
-Route::get('/dashboard', 'PageController@showDashboard');
-Route::post('/doLogin', 'UserController@login');
 
-//grouping
+Route::get('/dashboard', 'UserController@showDashboard')->middleware(\App\Http\Middleware\AuthCheck::class);
+Route::post('/doLogin', 'UserController@login');
+Route::get('/logout', 'UserController@logout');
+
+////grouping
 //Route::group(['middleware'=>['checkAuth']],function(){
 //    Route::get('/login', 'PageController@showLogin');
 //    Route::post('/doLogin', 'UserController@login');
 //});
+

@@ -17,17 +17,17 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->rememberToken();
             $table->timestamps();
-            $table->increments('user_id');
+//            $table->increments('user_id');
             $table->string('stsrc', 2);
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password');
-            $table->string('name',8000);
+            $table->string('name');
             $table->integer('age');
-            $table->char('gender',2);
-            $table->string('BOD');
+//            $table->char('gender',2);
+//            $table->string('BOD');
             $table->string('address');
-            $table->string('pathKTP',8000);
-            $table->string('role_id', 2);
+//            $table->string('pathKTP',8000);
+            $table->char('role_id', 2);
         });
     }
 

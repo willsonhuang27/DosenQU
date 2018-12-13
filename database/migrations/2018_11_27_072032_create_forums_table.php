@@ -17,7 +17,7 @@ class CreateForumsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('stsrc');
-            $table->increments('forum_id');
+//            $table->increments('forum_id');
             $table->string('forum_name');
             $table->string('description');
             $table->integer('category_id');
