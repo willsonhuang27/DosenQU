@@ -2,29 +2,33 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Eloquent;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use Notifiable;
-    protected $primaryKey = 'id';
-    protected $table = 'users';
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    public function role()
+    {
+        return $this->hasOne('App\Role','id','role_id');
+    }
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    public function thread()
+    {
+    	return $this->belongsToMany('App\Thread');
+    }
+
+    public function message()
+    {
+        return $this->belongsToMany('App\Message');
+    }
+
+    public function post()
+    {
+        return $this->belongsToMany('App\Post');
+    }
+
+    public function rating()
+    {
+        return $this->belongsToMany('App\Rating');
+    }
 }
