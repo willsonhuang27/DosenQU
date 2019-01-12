@@ -1,22 +1,47 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DosenQU - Login</title>
-</head>
-<body>
-    <form action="/doLogin" method="post" style="text-align: center">
-        {{csrf_field()}}
-        <input type="email" name="email" id="" placeholder="Username" ><br>
-        <input type="password" name="password" placeholder="Password" ><br>
-        <button type="submit">Log ON!</button>
-        @if(Session::has('alert'))
-            {{Session::get('alert')}}
-        @endif
-    </form>
-</body>
-</html>
+@extends('components.master')
 
+@section('title','login')
+
+@section('content')
+	<div class="card">
+        <div class="card-header font-weight-bold">Login</div>
+
+        <div class="card-body">
+            <form method="POST" action="{{ url('/login') }}">
+                {{ csrf_field() }}
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-4 col-form-label text-md-right font-weight-bold">E-Mail Address</label>
+
+                    <div class="col-md-6">
+                        <input id="email" type="email" class="form-control" name="email">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="password" class="col-md-4 col-form-label text-md-right font-weight-bold">Password</label>
+
+                    <div class="col-md-6">
+                        <input id="password" type="password" class="form-control" name="password">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-6 offset-md-4">
+                        <label>
+                            <input type="checkbox" name="remember" id="remember" class="mr-1">Remember Me
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-8 offset-md-4">
+                        <button type="submit" class="btn btn-primary py-2 px-4">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+@stop
